@@ -58,7 +58,7 @@ D7 = X Y Z
 /* write all the steps invloved */
 ```
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by:r.Neduncheran 
+Developed by:R.Neduncheran 
 RegisterNumber:212222050040
 ```
 ### PROGRAM Encoder
