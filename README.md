@@ -56,24 +56,27 @@ D7 = X Y Z
 
 ### Procedure
 /* write all the steps invloved */
-
-
-
-### PROGRAM 
-/*
+```
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by:r.Neduncheran 
+RegisterNumber:212222050040
+```
+### PROGRAM Encoder
+
+```
+module encoder(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+output a,b,c;
+input d0,d1,d2,d3,d4,d5,d6,d7;
+or(a,d4,d5,d6,d7);
+or(b,d2,d3,d6,d7);
+or(c,d1,d3,d5,d7);
+endmodule 
+```
 
 
 
-
-
-
-### RTL LOGIC  
-
-
+### RTL LOGIC
+![WhatsApp Image 2023-06-07 at 13 39 20](https://github.com/eduncheran/Experiment-08-Encoders-and-decoders-/assets/130551608/87b02ab8-9dfc-40ef-bc38-a60f1d16d416)
 
 
 
@@ -81,16 +84,52 @@ RegisterNumber:
 
 
 ### TIMING DIGRAMS  
+![WhatsApp Image 2023-06-07 at 14 09 49](https://github.com/eduncheran/Experiment-08-Encoders-and-decoders-/assets/130551608/8161cf5a-b765-4a66-b505-10c94ed5c90b)
+
+
+### TRUTH TABLE
+
+![WhatsApp Image 2023-06-07 at 14 35 59](https://github.com/eduncheran/Experiment-08-Encoders-and-decoders-/assets/130551608/65dc7216-a864-41b6-8cf7-9138a2dcce2d)
+
+
+
+### PROGRAM Decoder
+
+```
+module decoder(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+output d0,d1,d2,d3,d4,d5,d6,d7;
+input a,b,c;
+assign d0=(~a&~b&~c);
+assign d1=(~a&~b&c);
+assign d2=(~a&b&~c);
+assign d3=(~a&b&c);
+assign d4=(a&~b&~c);
+assign d5=(a&~b&c);
+assign d6=(a&b&~c);
+assign d7=(a&b&c);
+endmodule
+
+```
+
+
+### RTL LOGIC  
+
+![WhatsApp Image 2023-06-07 at 14 22 15](https://github.com/eduncheran/Experiment-08-Encoders-and-decoders-/assets/130551608/121360e5-2d90-42b2-baab-c2d272c99c9d)
 
 
 
 
+### TIMING DIGRAMS
 
-### TRUTH TABLE 
+![WhatsApp Image 2023-06-07 at 14 27 37](https://github.com/eduncheran/Experiment-08-Encoders-and-decoders-/assets/130551608/98808d58-229e-4f4f-aee9-51e7dfc7da1f)
 
 
 
+### TRUTH TABLE
+        
+![WhatsApp Image 2023-06-07 at 14 35 59](https://github.com/eduncheran/Experiment-08-Encoders-and-decoders-/assets/130551608/3fa88b79-eca2-4a83-a5e6-73f0563b598c)
 
 
 
 ### RESULTS 
+ Encoder and Decoder are verified.
